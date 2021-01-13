@@ -12,7 +12,7 @@
     <div class="main">
         <nav>
             <div class="logo">
-                <img src="img/logo_app">
+                <img src="img/logo_app.png">
             </div>
             <div class="nav-links">
                 <ul>
@@ -22,9 +22,70 @@
                 </ul>
             </div>
         </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="img/mobile.png" class="mobile">
+            <div id="circle">
+                <div class="feature a">
+                    <img src="img/camera.png">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12 Megapixels</p>
+                    </div>
+                </div>
+                <div class="feature b">
+                    <img src="img/procesor.png">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>One of the fastest!</p>
+                    </div>
+                </div>
+                <div class="feature c">
+                    <img src="img/display.png">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.2 inch</p>
+                    </div>
+                </div>
+                <div class="feature d">
+                    <img src="img/battery.png">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>37 hour lifespan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img id="upBtn" src="img/arrow.png">
+            <h3>Features</h3>
+            <img id="downBtn" src="img/arrow.png">
+        </div>
+
     </div>
 
-</body>
+    <script>
+        let circle = document.getElementById("circle");
+        let upBtn = document.getElementById("upBtn");
+        let downBtn = document.getElementById("downBtn");
 
+        let rotateValue = circle.style.transform
+        let rotateSum;
+
+        upBtn.onclick = function () {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        downBtn.onclick = function () {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+
+</body>
 
 </html>
