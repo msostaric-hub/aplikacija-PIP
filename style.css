@@ -100,6 +100,7 @@ nav{
     bottom: 80px;
     right: 350px;
     transform: rotate(90deg);
+  
 }
 .mobile{
     width: 450px;
@@ -152,4 +153,8 @@ nav{
 .text h3{
     text-align: center;
     padding: 50px;
+}
+.mob{
+    color: black;
+    position: absolute;
 }
